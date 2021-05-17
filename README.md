@@ -1,3 +1,2 @@
-# javalin-html-forms-example
+# Simple Web Application using Java
 
-## source code for tutorial at [https://javalin.io/tutorials/html-forms-example](https://javalin.io/tutorials/html-forms-example)
