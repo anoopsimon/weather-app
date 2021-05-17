@@ -1,0 +1,72 @@
+<body onload="generateEnvironments()">
+<h1>Daily Weather Report</h1>
+
+<form method="get" action="/get-report" onload="generateEnvironments()">
+    Choose Country
+    <select id="env"> </select>
+    <br><br>
+    Date Date :
+    <input type="date" id="date"/> </input>
+    <br>
+    <button>Generate</button>
+</form>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+    }
+
+    select {
+        margin: 5px 0;
+    }
+
+    h1, h2, h3 {
+        margin-top: 1.5em;
+        margin-bottom: 5px;
+    }
+
+
+</style>
+
+<script>
+    function generateEnvironments()
+    {
+        console.log('asdasd');
+        ["A & S","C & I","Aring","Digital"].forEach( function(item) {
+   const optionObj = document.createElement("option");
+   optionObj.textContent = item;
+   document.getElementById("env").appendChild(optionObj);
+});
+    }
+
+
+    function tableCreate() {
+  var body = document.getElementsByTagName('body')[0];
+  var tbl = document.createElement('table');
+  tbl.style.width = '100%';
+  tbl.setAttribute('border', '1');
+  var tbdy = document.createElement('tbody');
+  for (var i = 0; i < 3; i++) {
+    var tr = document.createElement('tr');
+    for (var j = 0; j < 2; j++) {
+      if (i == 2 && j == 1) {
+        break
+      } else {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('\u0020'))
+        i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
+        tr.appendChild(td)
+      }
+    }
+    tbdy.appendChild(tr);
+  }
+  tbl.appendChild(tbdy);
+  body.appendChild(tbl)
+}
+
+
+
+</script>
