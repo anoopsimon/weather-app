@@ -35,7 +35,7 @@ public class Main {
 
         app.get("/get-report", ctx -> {
            //ctx.result("Hi");
-            ctx.html(Test.data );
+            ctx.html(TestData.getContent() );
         });
 
     }
