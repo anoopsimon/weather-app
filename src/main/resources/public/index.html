@@ -11,7 +11,7 @@
     <button>Generate</button>
 </form>
 </body>
-
+<button onclick="httpGet()">Click me</button>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -32,10 +32,20 @@
 </style>
 
 <script>
+
+function httpGet()
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", '/get-fakedata', false ); // false for synchronous request
+    xmlHttp.send( null );
+    console.log('xmlHttp.responseText' + xmlHttp.responseText);
+    return xmlHttp.responseText;
+}
+
     function generateEnvironments()
     {
         console.log('asdasd');
-        ["A & S","C & I","Aring","Digital"].forEach( function(item) {
+         JSON.parse(httpGet()).forEach( function(item) {
    const optionObj = document.createElement("option");
    optionObj.textContent = item;
    document.getElementById("env").appendChild(optionObj);

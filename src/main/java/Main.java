@@ -1,3 +1,4 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
 import io.javalin.core.util.FileUtil;
 import java.util.HashMap;
@@ -30,6 +31,12 @@ public class Main {
                 FileUtil.streamToFile(file.getContent(), "upload/" + file.getFilename());
             });
             ctx.html("Upload successful");
+        });
+        app.get("/get-fakedata", ctx -> {
+            String[] org=new String[]{"Test","SIT","UAT"};
+            ctx.contentType("application/json");
+            ctx.json(org);
+            //ctx.html(TestData.getContent() );
         });
 
 
