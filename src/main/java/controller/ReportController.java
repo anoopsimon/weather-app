@@ -14,10 +14,8 @@ public class ReportController
 
     public void getAllProjects(@NotNull Context context)
     {
-        logger.debug("Extract all project names");
         logger.info("Extract all project names");
-        logger.error("Extract all project names");
-        logger.fatal("Extract all project names");
+
 
         context.contentType("application/json");
         context.json(new String[]{"TST","SIT","UAT"});
