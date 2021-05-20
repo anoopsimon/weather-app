@@ -1,4 +1,8 @@
-2021-05-20 17:41:38.059 INFO [qtp1552999801-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
-2021-05-20 17:41:39.254 INFO [qtp1552999801-22] [controller.ReportController] [getRData] [controller.ReportController.getRData(ReportController.java:26)] - Extract report
-2021-05-20 17:43:03.359 INFO - Extract report
-2021-05-20 17:43:50.508 INFO [controller.ReportController] [getRData] [controller.ReportController.getRData(ReportController.java:26)] - Extract report
+2021-05-20 17:47:22.303 INFO [controller.Commons] [getRData] [controller.ReportController.getRData(ReportController.java:25)] - Extract report
+2021-05-20 17:47:29.873 INFO [controller.Commons] [getRData] [controller.ReportController.getRData(ReportController.java:25)] - Extract report
+2021-05-20 17:47:32.714 INFO [controller.Commons] [getRData] [controller.ReportController.getRData(ReportController.java:25)] - Extract report
+2021-05-20 17:47:42.403 INFO [controller.Commons] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
+2021-05-20 17:51:22.640 INFO [controller.Commons] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:10)] - Extract all project names
+2021-05-20 17:51:24.078 INFO [controller.Commons] [getRData] [controller.ReportController.getRData(ReportController.java:18)] - Calculate and extract report 
+2021-05-20 17:52:39.435 INFO [controller.Commons] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:10)] - Extract all project names
+2021-05-20 17:52:40.250 INFO [controller.Commons] [getRData] [controller.ReportController.getRData(ReportController.java:18)] - Calculate and extract report 

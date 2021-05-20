@@ -1,17 +1,26 @@
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
 <body onload="startupHook()">
 <h1>Daily Weather Report</h1>
 
 <form method="get" action="/get-report" onload="generateEnvironments()">
     Choose Country
-    <select id="env"> </select>
+    <select class="mdc-list" id="env"> </select>
     <br><br>
     Date Date :
-    <input type="date" id="date"/> </input>
+    <input class="mdc-text-field__input" type="date" id="date"/> </input>
     <br>
-    <button>Generate</button>
+    <button class="mdc-button foo-button">Generate</button>
 </form>
 </body>
 <style>
+
+
     body {
         font-family: Arial, sans-serif;
         max-width: 600px;
