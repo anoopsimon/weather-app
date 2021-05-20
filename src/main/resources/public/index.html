@@ -1,4 +1,4 @@
-<body onload="generateEnvironments()">
+<body onload="startupHook()">
 <h1>Daily Weather Report</h1>
 
 <form method="get" action="/get-report" onload="generateEnvironments()">
@@ -11,7 +11,6 @@
     <button>Generate</button>
 </form>
 </body>
-<button onclick="httpGet()">Click me</button>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -33,22 +32,22 @@
 
 <script>
 
-function httpGet()
+function getProjects()
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", '/get-fakedata', false ); // false for synchronous request
+    xmlHttp.open( "GET", '/get-projects', false ); // false for synchronous request
     xmlHttp.send( null );
     console.log('xmlHttp.responseText' + xmlHttp.responseText);
     return xmlHttp.responseText;
 }
 
-    function generateEnvironments()
+    function startupHook()
     {
-        console.log('asdasd');
-         JSON.parse(httpGet()).forEach( function(item) {
-   const optionObj = document.createElement("option");
-   optionObj.textContent = item;
-   document.getElementById("env").appendChild(optionObj);
+         JSON.parse(getProjects()).forEach( function(item)
+         {
+         const optionObj = document.createElement("option");
+         optionObj.textContent = item;
+         document.getElementById("env").appendChild(optionObj);
 });
     }
 

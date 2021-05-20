@@ -1,49 +1,23 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
+import controller.ReportController;
 import io.javalin.Javalin;
-import io.javalin.core.util.FileUtil;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
 
-    private static Map<String, String> reservations = new HashMap<String, String>() {{
-        put("saturday", "No reservation");
-        put("sunday", "No reservation");
-    }};
+    static final String REPORT = "/get-report";
+    static final String PROJECTS = "/get-projects";
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        ReportController rc = new ReportController();
 
-        Javalin app = Javalin.create(config -> {
-            config.addStaticFiles("/public");
-        }).start(7071);
+        Javalin app = Javalin.create(config ->
+                        {
+                        config.addStaticFiles("/public");
+                        }).start(7071);
 
-        app.post("/make-reservation", ctx -> {
-            reservations.put(ctx.formParam("day"), ctx.formParam("time"));
-            ctx.html("Your reservation has been saved");
-        });
+        app.get(PROJECTS, rc::getAllProjects);
+        app.get(REPORT, rc::getRData);
 
-        app.get("/check-reservation", ctx -> {
-            ctx.html(reservations.get(ctx.queryParam("day")));
-        });
-
-        app.post("/upload-example", ctx -> {
-            ctx.uploadedFiles("files").forEach(file -> {
-                FileUtil.streamToFile(file.getContent(), "upload/" + file.getFilename());
-            });
-            ctx.html("Upload successful");
-        });
-        app.get("/get-fakedata", ctx -> {
-            String[] org=new String[]{"Test","SIT","UAT"};
-            ctx.contentType("application/json");
-            ctx.json(org);
-            //ctx.html(TestData.getContent() );
-        });
-
-
-        app.get("/get-report", ctx -> {
-           //ctx.result("Hi");
-            ctx.html(TestData.getContent() );
-        });
 
     }
 
