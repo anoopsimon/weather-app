@@ -1,0 +1,4 @@
+2021-05-20 17:41:38.059 INFO [qtp1552999801-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
+2021-05-20 17:41:39.254 INFO [qtp1552999801-22] [controller.ReportController] [getRData] [controller.ReportController.getRData(ReportController.java:26)] - Extract report
+2021-05-20 17:43:03.359 INFO - Extract report
+2021-05-20 17:43:50.508 INFO [controller.ReportController] [getRData] [controller.ReportController.getRData(ReportController.java:26)] - Extract report

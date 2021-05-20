@@ -15,7 +15,6 @@ public class ReportController
     public void getAllProjects(@NotNull Context context)
     {
         logger.info("Extract all project names");
-        logger.debug("Debug");
 
 
         context.contentType("application/json");
@@ -24,6 +23,7 @@ public class ReportController
 
     public void getRData(@NotNull Context context)
     {
+        logger.info("Extract report");
         context.contentType("application/json");
         context.html(FileUtil.readFile(System.getProperty("user.dir")+"/src/main/java/template.html"));
     }
