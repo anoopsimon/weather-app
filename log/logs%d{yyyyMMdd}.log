@@ -1,0 +1,2 @@
+2021-05-20 17:38:35.835 INFO [qtp293508253-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
+2021-05-20 17:38:35.848 DEBUG [qtp293508253-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:18)] - Debug

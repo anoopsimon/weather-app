@@ -15,6 +15,7 @@ public class ReportController
     public void getAllProjects(@NotNull Context context)
     {
         logger.info("Extract all project names");
+        logger.debug("Debug");
 
 
         context.contentType("application/json");
