@@ -1,3 +1,0 @@
-2021-05-20 17:36:16.712 INFO [qtp293508253-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
-2021-05-20 17:37:46.368 INFO [qtp293508253-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:17)] - Extract all project names
-2021-05-20 17:37:46.379 DEBUG [qtp293508253-16] [controller.ReportController] [getAllProjects] [controller.ReportController.getAllProjects(ReportController.java:18)] - Debug
